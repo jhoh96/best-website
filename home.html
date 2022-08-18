@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <h1>
+        This is the best, most functional website.
+    </h1>
+    <h2>
+        It is light-weight, no fancy libraries or frameworks. No NPM installs (or yarn adds). MINIMUM Javascript, what
+        is TypeScript.
+    </h2>
+    <h3>
+        CSS is also MINIMAL. Inline Styling if needed.
+    </h3>
+
+<body>
+    <h1 id="biggest-header">
+    </h1>
+    <button id='my-button' type="button" onclick="handleClick()">Add stuff</button>
+    <button id='my-color-button' type="button" onclick="handleColor()">Color stuff</button>
+    <p id='button-results'></p>
+    <p> You can add buttons with functionalities too</p>
+    <textarea id='text-area'>
+        HELLO There's even a text area to write stuff in. No fancy UI libraries, it's got borders, simplicity at its best.
+        Look you can even write stuff without a '<br>' tag.
+    </textarea>
+    <button id="text-button" type='button' onclick="handleText()"> Do stuff with the text</button>
+    <p id="text-stuff"></p>
+    <video>
+        You can even add a cat video here
+    </video>
+    <style>
+        #my-button,
+        #my-color-button,
+        #text-button {
+            width: 500px;
+        }
+
+        #text-area {
+            width: 95vw;
+            height: 25vh;
+            margin-left: 1%;
+        }
+    </style>
+</body>
+<footer id="footer">
+    <p>Oh look a footer</p>
+    <p>Author: Me</p>
+    <a href="https://www.justinoh.dev" target="_blank"> LINK to some website </a>
+    <style>
+        #footer {
+            position: absolute;
+            color: blue;
+            bottom: 5%;
+        }
+    </style>
+</footer>
+</head>
+<script>
+    document.getElementById('biggest-header').innerHTML = 'We are not entering the body tag'
+    const handleClick = () => {
+        document.getElementById('button-results').innerHTML = 'Button Clicked!'
+    }
+    const handleColor = () => {
+        document.getElementById('button-results').style.color = 'red'
+    }
+    const myText = document.getElementById('text-area').value
+    const handleText = () => {
+        document.getElementById('text-stuff').innerHTML = myText
+    }
+</script>
+
+</html>
